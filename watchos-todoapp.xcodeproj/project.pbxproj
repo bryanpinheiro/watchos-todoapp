@@ -12,6 +12,11 @@
 		9346C3522AD38853004405C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346C3512AD38853004405C2 /* ContentView.swift */; };
 		9346C3542AD38855004405C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9346C3532AD38855004405C2 /* Assets.xcassets */; };
 		9346C3572AD38855004405C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9346C3562AD38855004405C2 /* Preview Assets.xcassets */; };
+		9346C3622AD38AB6004405C2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346C3612AD38AB6004405C2 /* Task.swift */; };
+		9346C3642AD38AD5004405C2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346C3632AD38AD5004405C2 /* DatabaseManager.swift */; };
+		9346C3672AD38AF3004405C2 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 9346C3662AD38AF3004405C2 /* SQLite */; };
+		9346C36B2AD38C5E004405C2 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346C36A2AD38C5E004405C2 /* TodoView.swift */; };
+		9346C36D2AD38EB1004405C2 /* TaskDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9346C36C2AD38EB1004405C2 /* TaskDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,10 @@
 		9346C3512AD38853004405C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9346C3532AD38855004405C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9346C3562AD38855004405C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9346C3612AD38AB6004405C2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		9346C3632AD38AD5004405C2 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		9346C36A2AD38C5E004405C2 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		9346C36C2AD38EB1004405C2 /* TaskDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9346C3672AD38AF3004405C2 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +88,8 @@
 		9346C34E2AD38853004405C2 /* watchos-todoapp Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9346C3692AD38BBD004405C2 /* Screens */,
+				9346C3682AD38BB8004405C2 /* Database */,
 				9346C34F2AD38853004405C2 /* watchos_todoappApp.swift */,
 				9346C3512AD38853004405C2 /* ContentView.swift */,
 				9346C3532AD38855004405C2 /* Assets.xcassets */,
@@ -92,6 +104,24 @@
 				9346C3562AD38855004405C2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9346C3682AD38BB8004405C2 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9346C3612AD38AB6004405C2 /* Task.swift */,
+				9346C36C2AD38EB1004405C2 /* TaskDAO.swift */,
+				9346C3632AD38AD5004405C2 /* DatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		9346C3692AD38BBD004405C2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9346C36A2AD38C5E004405C2 /* TodoView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +157,9 @@
 			dependencies = (
 			);
 			name = "watchos-todoapp Watch App";
+			packageProductDependencies = (
+				9346C3662AD38AF3004405C2 /* SQLite */,
+			);
 			productName = "watchos-todoapp Watch App";
 			productReference = 9346C34A2AD38853004405C2 /* watchos-todoapp Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +191,9 @@
 				Base,
 			);
 			mainGroup = 9346C33D2AD38853004405C2;
+			packageReferences = (
+				9346C3652AD38AF3004405C2 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 9346C3452AD38853004405C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,7 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9346C3642AD38AD5004405C2 /* DatabaseManager.swift in Sources */,
+				9346C36D2AD38EB1004405C2 /* TaskDAO.swift in Sources */,
 				9346C3522AD38853004405C2 /* ContentView.swift in Sources */,
+				9346C36B2AD38C5E004405C2 /* TodoView.swift in Sources */,
+				9346C3622AD38AB6004405C2 /* Task.swift in Sources */,
 				9346C3502AD38853004405C2 /* watchos_todoappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +482,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9346C3652AD38AF3004405C2 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9346C3662AD38AF3004405C2 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9346C3652AD38AF3004405C2 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9346C33E2AD38853004405C2 /* Project object */;
 }
